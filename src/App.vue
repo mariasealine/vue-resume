@@ -1,17 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar></Navbar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      locales: [ {id: 'Eng', name: 'English'}, {id: 'Sve', name: 'Svenska'}]
+    }
+  },
   components: {
-    HelloWorld
+    Navbar
+  },
+  created() {
+    this.$store.dispatch('updateLanguage', 'Eng')
+  },
+  computed: {
+    currentLanguage: {
+      get() {
+        return this.$store.state.currentLanguage
+      },
+      set(str) {
+        this.$store.dispatch('updateLanguage', str)
+      }
+    }
   }
 }
 </script>
