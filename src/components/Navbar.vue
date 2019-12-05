@@ -12,7 +12,7 @@
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <button @click="toEnglish" class="flag-icon flag-icon-gb language-button">Eng</button>
-        <button @click="toSwedish" class="flag-icon flag-icon-se language-button">Sve</button>
+        <button @click="toSwedish" class="flag-icon flag-icon-se language-button">hej</button>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
