@@ -1,15 +1,13 @@
 <template>
   <b-container fluid class="home-container">
     <a name="home"></a>
-    <b-container fluid class="home-container-image">
     <b-row class="name-header container">
       <b-col cols="10" class="text-wrapper">
         <div class="pl-2">
           <b><p class="name">Maria</p> <p class="surname">Sjölin</p></b>
           <p class="profession">{{ text[currentLanguage] }}</p>
         </div>
-<!--           <a class="download-btn" v-bind:href="item.loc" download>{{item[currentLanguage]}}</a>
- -->    </b-col>
+        </b-col>
         <div class="contact-icons">
             <a id="email-link" href="mailto:mia.sjolin@gmail.com">
                 <font-awesome-icon icon="envelope" />
@@ -23,7 +21,6 @@
         </div>
     </b-row>
     </b-container>
-  </b-container>
 </template>
 
 <script>
@@ -67,14 +64,29 @@ export default {
 .name {
   color: #f8f9fa;
   margin-bottom: unset;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
 }
 .surname {
   color: #d6c00b;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
 }
 .profession {
   color: #f8f9fa;
   font-size: 40px;
   height: 180px;
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 4s; /* Firefox < 16 */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera < 12.1 */
+  animation: fadein 4s;
 }
 .download-btn {
   font-size: 16px;
@@ -84,7 +96,7 @@ export default {
     font-size: 25px;
     position: absolute;
     right: 5%;
-    bottom: 27%;
+    top: 450px;
     #email-link {
         display: inline-block;
         margin-right: 15px;
@@ -117,5 +129,33 @@ export default {
     .text-wrapper {
     padding-left: 0;
     }
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 </style>

@@ -11,8 +11,8 @@
         <b-nav-item href="#contact">{{ text[currentLanguage][4] }}</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
-        <button @click="toEnglish" class="flag-icon flag-icon-gb language-button">Eng</button>
-        <button @click="toSwedish" class="flag-icon flag-icon-se language-button">hej</button>
+        <button @click="toEnglish" class="flag-icon flag-icon-gb language-button"></button>
+        <button @click="toSwedish" class="flag-icon flag-icon-se language-button"></button>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -51,21 +51,23 @@ export default {
 </script>
 
 
-<style>
+<style lang="scss">
 #my-nav .my-nav {
   background-color: #131313;
   font-family: 'Raleway', sans-serif;
+  .language-button {
+    border: none;
+    background-color: transparent;
+    margin: 5px;
+  }
+  .language-button:focus {
+    outline: none;
+  }
+  .language-button:hover {
+    transform: scale(1.2);
+  }
 
 }
 
-#my-nav .language-button {
-  border: none;
-  background-color: transparent;
-  margin: 5px;
-}
-
-#my-nav .language-button:focus {
-  outline: none;
-}
 
 </style>
