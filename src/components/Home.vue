@@ -12,10 +12,13 @@
  -->    </b-col>
         <div class="contact-icons">
             <a id="email-link" href="mailto:mia.sjolin@gmail.com">
-            <font-awesome-icon icon="envelope" />
+                <font-awesome-icon icon="envelope" />
             </a>
             <a id="linkedin-link" href="https://www.linkedin.com/in/maria-sjölin-56398715a/">
                 <font-awesome-icon :icon="['fab', 'linkedin']" />
+            </a>
+            <a id="github-link" href="https://github.com/mariasealine">
+                <font-awesome-icon :icon="['fab', 'github']" />
             </a>
         </div>
     </b-row>
@@ -83,12 +86,30 @@ export default {
     right: 5%;
     bottom: 27%;
     #email-link {
+        display: inline-block;
         margin-right: 15px;
         color: #d6c10b;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
     #linkedin-link {
+        display: inline-block;
         margin-right: 15px;
         color: white;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    #github-link {
+        display: inline-block;
+        color: #d6c10b;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 }
 
