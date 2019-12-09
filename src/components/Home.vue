@@ -129,6 +129,9 @@ export default {
     .text-wrapper {
     padding-left: 0;
     }
+    .home-container {
+      background-position: 15%;
+    }
 }
 @keyframes fadein {
     from { opacity: 0; }

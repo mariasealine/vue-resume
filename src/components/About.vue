@@ -4,7 +4,7 @@
     <h4 class="header-line">
       <span class="header-title">{{title[currentLanguage]}}</span>
       </h4>
-      <div class="about-text">
+      <div class="about-text hidden">
         {{text[currentLanguage]}}
       </div>
   </b-container>

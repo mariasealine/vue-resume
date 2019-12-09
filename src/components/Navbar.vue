@@ -6,8 +6,8 @@
       <b-navbar-nav>
         <b-nav-item href="#home">{{ text[currentLanguage][0] }}</b-nav-item>
         <b-nav-item href="#about">{{ text[currentLanguage][1] }}</b-nav-item>
-        <b-nav-item href="#education">{{ text[currentLanguage][2] }}</b-nav-item>
-        <b-nav-item href="#experience">{{ text[currentLanguage][3] }}</b-nav-item>
+        <b-nav-item href="#history">{{ text[currentLanguage][2] }}</b-nav-item>
+        <b-nav-item href="#skills">{{ text[currentLanguage][3] }}</b-nav-item>
         <b-nav-item href="#contact">{{ text[currentLanguage][4] }}</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
@@ -24,8 +24,8 @@ export default {
     data() {
       return {
         text: {
-          Eng: ['Home', 'About', 'Education', 'Experience', 'Contact'],
-          Sve: ['Hem', 'Om', 'Utbildning', 'Erfarenhet', 'Kontakt']
+          Eng: ['Home', 'About', 'History', 'Skills', 'Contact'],
+          Sve: ['Hem', 'Om', 'Min historia', 'Kompetens', 'Kontakt']
         }
     }
   },
