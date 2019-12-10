@@ -7,8 +7,7 @@
       <section class="history-cards__container">
           <div v-for="(item, index) in text[currentLanguage]" :key="index" class="history-cards__item hidden">
                 <h5 class="history-cards__item--year">{{item.year}}</h5>
-                <div class="history-cards__item--text"></div>
-                {{item.description}}
+                <div class="history-cards__item--text">{{item.description}}</div>
             </div>
       </section>
   </b-container>
@@ -58,6 +57,7 @@ export default {
       margin-top: 70px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
     &__item {
       width: 300px;
@@ -66,5 +66,11 @@ export default {
         text-align: center;
       }
     }
+}
+//TODO Fix this
+@media screen and (max-width: 576px) {
+  .history-cards__container {
+    justify-content: left;
+  }
 }
 </style>

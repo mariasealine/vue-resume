@@ -4,6 +4,7 @@
     <Home></Home>
     <about></about>
     <history></history>
+    <skills></skills>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import History from './components/History.vue'
+import Skills from './components/Skills.vue'
 
 export default {
   name: 'app',
@@ -24,7 +26,8 @@ export default {
     Navbar,
     Home,
     About,
-    History
+    History,
+    Skills
   },
   created() {
     this.$store.dispatch('updateLanguage', 'Eng')
