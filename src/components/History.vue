@@ -1,14 +1,18 @@
 <template>
   <b-container class="history-container">
+    <div class="new-header">{{title[currentLanguage]}}</div>
     <a name="history"></a>
-    <h4 class="header-line">
+    <!-- <h4 class="header-line">
       <span class="header-title">{{title[currentLanguage]}}</span>
-      </h4>
+      </h4> -->
       <section class="history-cards__container">
-          <div v-for="(item, index) in text[currentLanguage]" :key="index" class="history-cards__item hidden">
-                <h5 class="history-cards__item--year">{{item.year}}</h5>
-                <div class="history-cards__item--text">{{item.description}}</div>
-            </div>
+        <div v-for="(item, index) in text[currentLanguage]" :key="index" class="history-cards__item hidden dont-show-yet">
+          <h5 class="history-cards__item--year">{{item.year}}</h5>
+          <div class="history-cards__item--text">{{item.description}}</div>
+        </div>
+        <div class="history-cards__item show-more-box">
+          <div class="animated-button">Further back</div>
+        </div>
       </section>
   </b-container>
 </template>
@@ -38,6 +42,9 @@ export default {
         guideHeader: null
     }
   },
+  mounted() {
+    this.showItemsStart();
+  },
   computed: {
     currentLanguage: {
       get() {
@@ -45,12 +52,30 @@ export default {
       }
     }
   },
+  methods: {
+    showItemsStart() {
+      const items = document.querySelectorAll('.history-cards__item');
+      console.log(items);
+      for (let i = 0; i<3; i++) {
+        items[i].classList.remove('dont-show-yet');
+        
+      }
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .history-container {
   margin-top: 70px;
+  .new-header {
+    background-color: #c55644;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;
+  }
 }
 .history-cards {
     &__container {
@@ -58,12 +83,38 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      .show-more-box {
+        display: flex;
+        justify-content: center;
+        .animated-button {
+          height: 150px;
+          width: 150px;
+          background-color: #dcb55c;
+          text-align: center;
+          padding-top: 19%;
+          border-radius: 50%;
+        }
+      }
     }
     &__item {
-      width: 300px;
+      width: 40%;
       height: 200px;
+      padding: 20px;
+      margin: 20px;
+      &:nth-child(1) {
+        background-color: #f8f9fa;
+      }
+      &:nth-child(2) {
+        background-color: #eacfae;
+      }
+      &:nth-child(3) {
+        background-color: #9cafc3;
+      }
       &--year {
         text-align: center;
+      }
+      &.dont-show-yet {
+        display: none;
       }
     }
 }

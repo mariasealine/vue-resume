@@ -27,7 +27,7 @@ export default {
     Home,
     About,
     History,
-    Skills
+    Skills,
   },
   created() {
     this.$store.dispatch('updateLanguage', 'Eng')
@@ -75,7 +75,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 
 body {
-  background-color: #cbcbcc !important;
   .hidden {
     opacity: 0;
   }

@@ -1,16 +1,16 @@
 <template>
+<div>
+  <div class="skills-header">{{title[currentLanguage]}}</div>
   <b-container class="skills-container">
     <a name="skills"></a>
-    <h4 class="header-line">
-      <span class="header-title">{{title[currentLanguage]}}</span>
-      </h4>
       <section class="skills-item__container">
-          <div v-for="(item, index) in listSkills[currentLanguage]" :key="index" class="skills__item hidden">
-                <div class="history-cards__item--text"></div>
-                {{item}}
-            </div>
+        <div v-for="(item, index) in listSkills[currentLanguage]" :key="index" class="skills__item hidden">
+          <div class="history-cards__item--text"></div>
+          {{item}}
+        </div>
       </section>
   </b-container>
+</div>
 </template>
 <script>
 export default {
@@ -36,6 +36,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.skills-header {
+  width: 100%;
+  background-color: #c55544;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  padding: 20px;
+  margin-top: 40px;
+}
 .skills-item__container {
   margin: 70px 50px 50px 50px;
   display: flex;
