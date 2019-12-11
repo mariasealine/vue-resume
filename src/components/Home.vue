@@ -1,9 +1,9 @@
 <template>
-  <b-container fluid class="home-container">
+  <div class="home-container">
     <a name="home"></a>
     <b-row class="name-header container">
       <b-col cols="10" class="text-wrapper">
-        <div class="pl-2">
+        <div class="pl-4">
           <b><p class="name">Maria</p> <p class="surname">Sjölin</p></b>
           <p class="profession">{{ text[currentLanguage] }}</p>
         </div>
@@ -20,7 +20,7 @@
             </a>
         </div>
     </b-row>
-    </b-container>
+  </div>
 </template>
 
 <script>
@@ -47,13 +47,20 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 
 .home-container {
-  background: url('../assets/me-bench.png') no-repeat;
+  // background: url('../assets/me-bench.png') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
   height: 500px;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+
+  background-image: -webkit-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
+  background-image:  -moz-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
+  background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
+  background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
+  background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
 }
 .name-header {
   padding-top: 80px;
@@ -131,6 +138,13 @@ export default {
     }
     .home-container {
       background-position: 15%;
+      background-image: none;
+      background: url('../assets/me-bench.png') no-repeat;
+      background-attachment: fixed;
+      -webkit-background-size: auto 87%;
+      -moz-background-size: auto 87%;
+      -o-background-size: auto 87%;
+      background-size: auto 87%;
     }
 }
 @keyframes fadein {
