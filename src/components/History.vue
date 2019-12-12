@@ -120,8 +120,13 @@ export default {
 }
 //TODO Fix this
 @media screen and (max-width: 576px) {
-  .history-cards__container {
-    justify-content: left;
+  .history-cards {
+    &__container {
+      justify-content: left;
+    }
+    &__item {
+      width: 100%;
+    }
   }
 }
 </style>
