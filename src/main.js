@@ -5,12 +5,12 @@ import BootstrapVue from "bootstrap-vue";
 import FlagIcon from "vue-flag-icon";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faFontAwesome, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 Vue.use(BootstrapVue, FlagIcon);
 
-library.add(faFontAwesome, faLinkedin, faEnvelope, faGithub)
+library.add(faLinkedin, faEnvelope, faGithub)
  
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

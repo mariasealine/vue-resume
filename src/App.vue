@@ -3,8 +3,8 @@
     <Navbar></Navbar>
     <Home></Home>
     <about></about>
-    <history></history>
-    <skills></skills>
+<!--     <history></history>
+ -->    <skills></skills>
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-import History from './components/History.vue'
+// import History from './components/History.vue'
 import Skills from './components/Skills.vue'
 
 export default {
@@ -26,8 +26,8 @@ export default {
     Navbar,
     Home,
     About,
-    History,
-    Skills,
+    //History,
+    Skills
   },
   created() {
     this.$store.dispatch('updateLanguage', 'Eng')
@@ -71,8 +71,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/keyframes.scss';
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
 
 body {
   .hidden {
@@ -89,32 +91,4 @@ body {
   }
 }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 </style>

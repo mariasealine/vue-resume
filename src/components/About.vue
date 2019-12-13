@@ -48,20 +48,22 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../assets/keyframes.scss';
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .about-container {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  height: 500px;
+  height: auto;
   .about-text {
-    height: 300px;
+    // height: 300px;
     width: 70%;
     background-color: white;
     padding: 36px;
     padding-top: 50px;
     font-family: 'Raleway', sans-serif;
+    // font-family: 'Source Serif Pro', serif;
     font-size: 25px;
     .header {
       background-color: #c55644;
@@ -98,15 +100,6 @@ export default {
         -ms-animation: arrow 4s infinite; /* Internet Explorer */
         -o-animation: arrow 4s infinite; /* Opera < 12.1 */
         animation: arrow 4s infinite;
-        /* &:nth-child(1) {
-          animation-delay: 0;
-        }
-        &:nth-child(2) {
-          animation-delay: 0.7s;
-        }
-        &:nth-child(3) {
-          animation-delay: 1.4s;
-        } */
       }
     }
   }
@@ -114,22 +107,19 @@ export default {
 @media screen and (max-width: 576px) {
   .about-container {
     flex-direction: column;
-    height: 800px;
+    height: auto;
+    padding: 0;
     .about-text {
       width: 100%;
       font-size: 20px;
+      .header {
+        width: 43%;
+      }
     }
     .contact-me__box {
+      height: 220px;
       width: 100%;
     }
   }
-}
-@keyframes arrow {
-    0% { transform: translateY(120%); opacity: 0; }
-    100% { transform: translateY(0%); opacity: 1; }
-}
-@-webkit-keyframes arrow {
-    0% { transform: translateY(120%); opacity: 0; }
-    100% { transform: translateY(0%); opacity: 1; }
 }
 </style>

@@ -109,4 +109,12 @@ export default {
     }
   }
 }
+@media screen and (max-width: 576px) {
+  .skills-item__container {
+    margin: 0;
+    .skills__item {
+      padding: 10px;
+    }
+  }
+}
 </style>

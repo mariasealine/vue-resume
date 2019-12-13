@@ -66,6 +66,11 @@ export default {
   .language-button:hover {
     transform: scale(1.2);
   }
+  .navbar-toggler {
+    &:focus {
+      outline: none;
+    }
+  }
 
 }
 

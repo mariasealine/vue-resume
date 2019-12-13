@@ -1,9 +1,7 @@
 <template>
-  <div class="home-container">
-    <div class="moving-obj"></div>
-    <div class="moving-obj2"></div>
-    <div class="moving-obj3"></div>
-    <div class="moving-obj4"></div>
+  <div class="home-container" :class="colorSwitch ? 'red' : 'yellow'">
+    <div class="circle circle__small" @click="colorSwitch = !colorSwitch"></div>
+    <div class="circle circle__big" :class="{ active: moveSwitch }" @click="moveSwitch = !moveSwitch"></div>
     <a name="home"></a>
     <b-row class="name-header container">
       <b-col cols="10" class="text-wrapper">
@@ -14,13 +12,13 @@
         </b-col>
         <div class="contact-icons">
             <a id="email-link" href="mailto:mia.sjolin@gmail.com">
-                <font-awesome-icon icon="envelope" />
+              <font-awesome-icon icon="envelope" />
             </a>
             <a id="linkedin-link" href="https://www.linkedin.com/in/maria-sjölin-56398715a/">
-                <font-awesome-icon :icon="['fab', 'linkedin']" />
+              <font-awesome-icon :icon="['fab', 'linkedin']" />
             </a>
             <a id="github-link" href="https://github.com/mariasealine">
-                <font-awesome-icon :icon="['fab', 'github']" />
+              <font-awesome-icon :icon="['fab', 'github']" />
             </a>
         </div>
     </b-row>
@@ -29,13 +27,14 @@
 
 <script>
 export default {
-    data() {
-      return {
-        text: {
-          Eng: 'Software developer',
-          Sve: 'Utvecklare'
-        },
-        // item: {Eng: 'Download Resumé', Sve: 'Hämta CV', loc: require('../assets/jag.png')}
+  data() {
+    return {
+      colorSwitch: false,
+      moveSwitch: false,
+      text: {
+        Eng: 'Software developer',
+        Sve: 'Utvecklare'
+      },
     }
   },
   computed: {
@@ -43,11 +42,12 @@ export default {
       get() {
         return this.$store.state.currentLanguage
       }
-    }
+    },
   }
 };
 </script>
 <style lang="scss" scoped>
+@import '../assets/keyframes.scss';
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 
 .home-container {
@@ -64,40 +64,56 @@ export default {
   background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
+  &.red {
+    background-image: -webkit-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
+    background-image:  -moz-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
+    background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
+    background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
+    background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
+  }
   .name-header {
     padding-top: 80px;
     align-content: center;
     font-family: 'Staatliches';
     font-size: 70px;
   }
-  .moving-obj {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: absolute;
-    top: 111px;
-    right: 100px;
-    -webkit-animation: moving 7s infinite; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: moving 7s infinite; /* Firefox < 16 */
-    -ms-animation: moving 7s infinite; /* Internet Explorer */
-    -o-animation: moving 7s infinite; /* Opera < 12.1 */
-    animation: moving 7s infinite;
-  }
-  .moving-obj2 {
-    width: 100px;
-    height: 100px;
+  .circle {
+    cursor: pointer;
     z-index: 2;
     border-radius: 50%;
     position: absolute;
-    top: 430px;
-    left: 40px;
-    background-color: #dcb55c;
-    -webkit-animation: movingtwo 5s infinite; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: movingtwo 5s infinite; /* Firefox < 16 */
-    -ms-animation: movingtwo 5s infinite; /* Internet Explorer */
-    -o-animation: movingtwo 5s infinite; /* Opera < 12.1 */
-    animation: movingtwo 5s infinite;
+    &__small {
+      width: 30px;
+      height: 30px;
+      top: 111px;
+      right: 100px;
+      -webkit-animation: growing-obj 7s infinite; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: growing-obj 7s infinite; /* Firefox < 16 */
+      -ms-animation: growing-obj 7s infinite; /* Internet Explorer */
+      -o-animation: growing-obj 7s infinite; /* Opera < 12.1 */
+      animation: growing-obj 7s infinite;
+    }
+    &__big {
+      width: 100px;
+      height: 100px;
+      top: 430px;
+      left: 40px;
+      background-color: #2c4b50;
+      -webkit-animation: movingX 5s infinite; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: movingX 5s infinite; /* Firefox < 16 */
+      -ms-animation: movingX 5s infinite; /* Internet Explorer */
+      -o-animation: movingX 5s infinite; /* Opera < 12.1 */
+      animation: movingX 5s infinite;
+      &.active {
+        -webkit-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Firefox < 16 */
+        -ms-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alernate infinite; /* Internet Explorer */
+        -o-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Opera < 12.1 */
+        animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite;
+      }
+    }
   }
+  
   .name {
     color: #f8f9fa;
     margin-bottom: unset;
@@ -153,88 +169,15 @@ export default {
 @media screen and (max-width: 576px) {
   .home-container {
     background-position: 15%;
-    background-image: none;
-    background: url('../assets/me-bench.png') no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: auto 87%;
-    -moz-background-size: auto 87%;
-    -o-background-size: auto 87%;
-    background-size: auto 87%;
+    background-image: url('../assets/me-bench.png');
+    // background: url('../assets/me-bench.png') no-repeat;
+    background-attachment: unset;
+    &.red {
+      background-image: url('../assets/me-bench-red.png');
+      }
     .text-wrapper {
       padding-left: 0;
     }
   }
-}
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes moving {
-    0% { transform: scale(1); background-color: #f8f9fa; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #f8f9fa; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes moving {
-    0% { transform: scale(1); background-color: #f8f9fa; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #f8f9fa; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes moving {
-    0% { transform: scale(1); background-color: #f8f9fa; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #f8f9fa; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes moving {
-    0% { transform: scale(1); background-color: #f8f9fa; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #f8f9fa; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes moving {
-    0% { transform: scale(1); background-color: #f8f9fa; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #f8f9fa; }
-}
-@keyframes movingtwo {
-    0% { transform: translateX(0%); background-color: #f8f9fa; }
-    50%   { transform: translateX(40%); background-color: #dcb55c; }
-    100% { transform: translateX(0%); background-color: #f8f9fa; }
-}
-@-webkit-keyframes movingtwo {
-    0% { transform: translateX(0%); background-color: #f8f9fa; }
-    50%   { transform: translateX(40%); background-color: #dcb55c; }
-    100% { transform: translateX(0%); background-color: #f8f9fa; }
 }
 </style>
