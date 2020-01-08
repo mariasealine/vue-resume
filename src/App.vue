@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <Navbar></Navbar>
-    <Home></Home>
-    <about></about>
-<!--     <history></history>
- -->    <skills></skills>
+    <div id="overlay">
+      <Navbar></Navbar>
+      <Home></Home>
+      <about></about>
+      <history></history>
+      <skills></skills>
+    </div>
   </div>
 </template>
 
@@ -12,7 +14,7 @@
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-// import History from './components/History.vue'
+import History from './components/History.vue'
 import Skills from './components/Skills.vue'
 
 export default {
@@ -26,7 +28,7 @@ export default {
     Navbar,
     Home,
     About,
-    //History,
+    History,
     Skills
   },
   created() {
@@ -77,6 +79,17 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
 
 body {
+  #overlay {
+    width: 100%;
+    height: 100%;
+    // background-color: black;
+    opacity: 1;
+    -webkit-animation: fadeout 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeout 3s; /* Firefox < 16 */
+    -ms-animation: fadeout 3s; /* Internet Explorer */
+    -o-animation: fadeout 3s; /* Opera < 12.1 */
+    animation: fadeout 3s;
+  }
   .hidden {
     opacity: 0;
   }

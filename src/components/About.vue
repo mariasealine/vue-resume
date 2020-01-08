@@ -1,7 +1,7 @@
 <template>
   <div class="about-container">
     <a name="about"></a>
-    <div class="contact-me__box hidden">
+    <div class="contact-me__box">
       <div class="arrows-wrapper">
         <div class="animate-arrow"></div>
         <div class="animate-arrow"></div>

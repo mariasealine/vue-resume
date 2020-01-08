@@ -65,11 +65,11 @@ export default {
   background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   &.red {
-    background-image: -webkit-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
-    background-image:  -moz-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
-    background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
-    background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
-    background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-red.png');
+    background-image: -webkit-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  -moz-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
   }
   .name-header {
     padding-top: 80px;
@@ -124,6 +124,7 @@ export default {
     animation: fadein 2s;
   }
   .surname {
+    line-height: 1;
     color: #d6c00b;
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -134,7 +135,7 @@ export default {
   .profession {
     color: #f8f9fa;
     font-size: 40px;
-    height: 180px;
+    line-height: 1;
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 4s; /* Firefox < 16 */
     -ms-animation: fadein 4s; /* Internet Explorer */
@@ -170,10 +171,16 @@ export default {
   .home-container {
     background-position: 15%;
     background-image: url('../assets/me-bench.png');
-    // background: url('../assets/me-bench.png') no-repeat;
     background-attachment: unset;
+    .name {
+      padding-top: 60px;
+    }
+    .circle__small {
+      top: 69px;
+      right: 32px;
+    }
     &.red {
-      background-image: url('../assets/me-bench-red.png');
+      background-image: url('../assets/me-bench-blue.png');
       }
     .text-wrapper {
       padding-left: 0;
