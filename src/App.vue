@@ -4,7 +4,7 @@
       <Navbar></Navbar>
       <Home></Home>
       <about></about>
-      <history></history>
+      <history-flip-cards></history-flip-cards>
       <skills></skills>
     </div>
   </div>
@@ -14,8 +14,9 @@
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-import History from './components/History.vue'
+// import History from './components/History.vue'
 import Skills from './components/Skills.vue'
+import HistoryFlipCards from './components/HistoryFlipCards.vue'
 
 export default {
   name: 'app',
@@ -28,8 +29,8 @@ export default {
     Navbar,
     Home,
     About,
-    History,
-    Skills
+    Skills,
+    HistoryFlipCards
   },
   created() {
     this.$store.dispatch('updateLanguage', 'Eng')

@@ -83,23 +83,23 @@
 
 // Growing and changing color
 @keyframes growing-obj {
-    0% { transform: scale(1); background-color: #2c4b50;; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #2c4b50; }
+    0% { transform: scale(1) rotate(0deg); background-color: #c55645; }
+    50%   { transform: scale(1.5) rotate(180deg); background-color: #dcb55c; }
+    100% { transform: scale(1) rotate(360deg); background-color: #c55645; }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes growing-obj {
-    0% { transform: scale(1); background-color: #2c4b50; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #2c4b50; }
+    0% { transform: scale(1) rotate(0deg); background-color: #c55645; }
+    50%   { transform: scale(1.5) rotate(180deg); background-color: #dcb55c; }
+    100% { transform: scale(1) rotate(360deg); background-color: #c55645; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes growing-obj {
-    0% { transform: scale(1); background-color: #c55645; }
-    50%   { transform: scale(1.5); background-color: #dcb55c; }
-    100% { transform: scale(1); background-color: #c55645; }
+    0% { transform: scale(1) rotate(0deg); background-color: #c55645; }
+    50%   { transform: scale(1.5) rotate(180deg); background-color: #dcb55c; }
+    100% { transform: scale(1) rotate(360deg); background-color: #c55645; }
 }
 /* Internet Explorer */
 @-ms-keyframes growing-obj {

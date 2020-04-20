@@ -1,7 +1,7 @@
 <template>
-  <div class="home-container" :class="colorSwitch ? 'red' : 'yellow'">
-    <div class="circle circle__small" @click="colorSwitch = !colorSwitch"></div>
-    <div class="circle circle__big" :class="{ active: moveSwitch }" @click="moveSwitch = !moveSwitch"></div>
+  <div class="home-container" :class="colorSwitch ? 'blue' : 'yellow'">
+    <!-- <div class="moving-object moving-object__small" @click="colorSwitch = !colorSwitch"></div> -->
+    <div class="moving-object moving-object__big" :class="{ active: moveSwitch }" @click="[moveSwitch = !moveSwitch, colorSwitch = !colorSwitch]"></div>
     <a name="home"></a>
     <b-row class="name-header container">
       <b-col cols="10" class="text-wrapper">
@@ -51,7 +51,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 
 .home-container {
-  // background: url('../assets/me-bench.png') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -64,7 +63,7 @@ export default {
   background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
-  &.red {
+  &.blue {
     background-image: -webkit-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
     background-image:  -moz-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
     background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
@@ -77,21 +76,21 @@ export default {
     font-family: 'Staatliches';
     font-size: 70px;
   }
-  .circle {
+  .moving-object {
     cursor: pointer;
     z-index: 2;
-    border-radius: 50%;
     position: absolute;
+    border-radius: 50%;
     &__small {
       width: 30px;
       height: 30px;
       top: 111px;
       right: 100px;
-      -webkit-animation: growing-obj 7s infinite; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: growing-obj 7s infinite; /* Firefox < 16 */
-      -ms-animation: growing-obj 7s infinite; /* Internet Explorer */
-      -o-animation: growing-obj 7s infinite; /* Opera < 12.1 */
-      animation: growing-obj 7s infinite;
+      -webkit-animation: growing-obj 7s linear infinite; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: growing-obj 7s linear infinite; /* Firefox < 16 */
+      -ms-animation: growing-obj 7s linear infinite; /* Internet Explorer */
+      -o-animation: growing-obj 7s linear infinite; /* Opera < 12.1 */
+      animation: growing-obj 7s linear infinite;
     }
     &__big {
       width: 100px;
@@ -186,5 +185,18 @@ export default {
       padding-left: 0;
     }
   }
+}
+
+.test-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 111px;
+  right: 100px;
+  -webkit-animation: growing-obj 7s linear infinite; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: growing-obj 7s linear infinite; /* Firefox < 16 */
+  -ms-animation: growing-obj 7s linear infinite; /* Internet Explorer */
+  -o-animation: growing-obj 7s linear infinite; /* Opera < 12.1 */
+  animation: growing-obj 7s linear infinite;
 }
 </style>

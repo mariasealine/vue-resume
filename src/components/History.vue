@@ -5,7 +5,7 @@
       <section class="history-cards__container">
         <div class="new-header">{{title[currentLanguage]}}</div>
         <div class="slideshow-container">
-          <div v-for="(item, index) in text[currentLanguage]" :key="index" class="history-cards__item my-slides">
+          <div v-for="(item, index) in text[currentLanguage]" :key="index" class="history-cards__item my-slides" :style="{ background: 'url(' + text[currentLanguage][index].image + ')' }">
             <h5 class="history-cards__item--year">{{item.year}}</h5>
             <div class="history-cards__item--text">{{item.description}}</div>
           </div>
@@ -34,7 +34,7 @@ export default {
           Eng: [{year: '2018-now Software developer', description: 'Telia company AB, software developer'}, 
           {year: '2018 Software development studies', description: 'Accelerated learning programme, Academy'},
           {year: '2013-2016 SLT', description: 'Speech and language therapist, Röstkonsulten AB'},
-          {year: '2009-2013 SLT studies', description: 'Speech and language therapy studies, Karolinska Institutet'},
+          {year: '2009-2013 SLT studies', description: 'Speech and language therapy studies, Karolinska Institutet', image: '../assets/logoped.png'},
           {year: '2008 Law studies', description: 'Law survey course, Uppsala University'},
           {year: '2007-2009 Hotel receptionist', description: 'Hotel receptionist, Ibis Arlanda'},
           {year: '2006-2007 Pharmacy studies', description: 'Pharmacy studies, Uppsala University'},
@@ -73,6 +73,9 @@ export default {
           dots[i].className = dots[i].className.replace(" active", "");
       } */
       slides[this.slideIndex-1].style.display = "block";
+      // slides[this.slideIndex-1].style.background = `${this.text[this.currentLanguage][this.slideIndex-1].background}`;
+      // console.log(this.text[this.currentLanguage][this.slideIndex-1].background);
+
       // dots[slideIndex-1].className += " active";
     },
     plusSlides(n) {
