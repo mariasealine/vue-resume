@@ -32,7 +32,7 @@ export default {
         },
         text: {
           Eng: [{year: '2018-now Software developer', description: 'Telia company AB, software developer'}, 
-          {year: '2018 Software development studies', description: 'Accelerated learning programme, Academy'},
+          {year: '2018 Accelerated learning programme', description: 'Accelerated learning programme, Academy'},
           {year: '2013-2016 SLT', description: 'Speech and language therapist, Röstkonsulten AB'},
           {year: '2009-2013 SLT studies', description: 'Speech and language therapy studies, Karolinska Institutet', image: '../assets/logoped.png'},
           {year: '2008 Law studies', description: 'Law survey course, Uppsala University'},
