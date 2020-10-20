@@ -15,8 +15,6 @@
 import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-// import History from './components/History.vue'
-// import HistoryFlipCards from './components/HistoryFlipCards.vue'
 import Resume from './components/Resume.vue'
 import SkillsNew from './components/SkillsNew.vue'
 import Footer from './components/Footer.vue'
@@ -87,11 +85,9 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
-  background: antiquewhite;
   #overlay {
     width: 100%;
     height: 100%;
-    // background-color: black;
     opacity: 1;
     -webkit-animation: fadeout 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadeout 3s; /* Firefox < 16 */
