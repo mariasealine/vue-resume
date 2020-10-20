@@ -27,10 +27,15 @@ export default {
         Eng: `To begin with I am a person who really enjoys to challenge myself. 
         I love learning new things, and strive to get excellent in the things I find most interesting. 
         As a result from this I’ve been studying and working with a variety of things. 
-        In the end I found what now feels like what I was meant to do, developing. 
-        What I love most about this line of work is the creativity and the possibilities, 
-        along with the endless opportunities of things to learn.`,
-        Sve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        Before I started working as a developer, I worked as a speech and language therapist for several years, 
+        and this is a profession that is still very close to my heart. 
+        However, I have always felt curious about coding and what I’ve come to love the most about this line of work is 
+        the creativity and the possibilities, along with the endless opportunities of things to learn.`,
+        Sve: `Till att börja med är jag en person som verkligen tycker om att utmana mig själv. Jag älskar att lära mig nya saker 
+        och strävar efter att bli riktigt bra på det jag gillar. Som ett resultat av detta har jag studerat och arbetat inom flertalet 
+        områden. Innan jag kom in på banan som utvecklare arbetade jag som legitimerad logoped under flera år, och detta är ett yrke 
+        som fortfarande ligger mig mycket varmt om hjärtat. Jag har dock alltid känt en nyfikenhet gentemot kod och det jag gillar 
+        mest med detta arbete är kreativiteten och möjligheterna, samt att det alltid finns nya saker att lära sig.`
       },
       contactText: {
         Eng: 'If you want to know more about me, don’t hesitate to contact me by email or linkedin! Feel free to check out my code on github aswell.',
@@ -49,22 +54,20 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../assets/keyframes.scss';
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .about-container {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   height: auto;
+  font-family: 'Titillium Web', sans-serif;
   .about-text {
-    // height: 300px;
     width: 70%;
-    // background-color: white;
     padding: 36px;
     padding-top: 50px;
-    font-family: 'Raleway', sans-serif;
-    // font-family: 'Source Serif Pro', serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 25px;
+    font-weight: 200;
     .header {
       background-color: #2c4b50;
       color: white;
@@ -83,6 +86,7 @@ export default {
     padding-top: 70px;
     &--text {
       font-size: 16px;
+      font-weight: 400;
     }
     .arrows-wrapper {
       font-size: 25px;

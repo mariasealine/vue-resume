@@ -49,7 +49,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../assets/keyframes.scss';
-@import url('https://fonts.googleapis.com/css?family=Staatliches');
 
 .home-container {
   -webkit-background-size: cover;

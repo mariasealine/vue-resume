@@ -80,9 +80,11 @@ export default {
 
 <style lang="scss">
 @import './assets/keyframes.scss';
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
   background: antiquewhite;

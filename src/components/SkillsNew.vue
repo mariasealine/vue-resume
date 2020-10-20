@@ -40,13 +40,14 @@ export default {
 		flex-wrap: wrap;
 		padding: 36px;
 		font-size: 25px;;
-		font-family: "Raleway", sans-serif;
+		font-family: 'Titillium Web', sans-serif;
 		margin-bottom: 80px;
 	}
 	&-header {
 		width: 100%;
 		margin-bottom: 36px;
 		.title {
+			font-weight: 200;
 			background: #2c4b50;
 			color: white;
 			padding: 10px;
@@ -55,6 +56,7 @@ export default {
 	&-item-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		text-transform: uppercase;
 		.skills__item {
 			padding-right: 8px;
 		}

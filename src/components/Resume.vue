@@ -12,6 +12,7 @@ export default {
     return {
       publicPath: process.env.BASE_URL,
       resume: {
+        // TODO: Add correct files for resumes
         Eng: 'favicon.ico',
         Sve: 'favicon3.ico'
       }
@@ -28,12 +29,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/keyframes.scss';
 
 .resume-container {
   display: flex;
   flex-wrap: wrap;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   padding: 36px;
   margin: 30px 0;
   background: #2c4b50;

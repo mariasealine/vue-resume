@@ -143,35 +143,6 @@
     100% { transform: translateX(0%); background-color: #f8f9fa; }
 }
 
-// Moving Y-direction
-@keyframes movingY {
-    0% { transform: translateY(0%); background-color: #c55544; }
-    50%   { transform: translateY(170%); background-color: #dcb55c; }
-    100% { transform: translateY(0%); background-color: #c55544; }
-}
-@-webkit-keyframes movingY {
-    0% { transform: translateY(0%); background-color: #c55544; }
-    50%   { transform: translateY(170%); background-color: #dcb55c; }
-    100% { transform: translateY(0%); background-color: #c55544; }
-}
-/* Internet Explorer */
-@-ms-keyframes movingY {
-    0% { transform: translateY(0%); background-color: #c55544; }
-    50%   { transform: translateY(170%); background-color: #dcb55c; }
-    100% { transform: translateY(0%); background-color: #c55544; }
-}
-/* Opera < 12.1 */
-@-o-keyframes movingY {
-    0% { transform: translateY(0%); background-color: #c55544; }
-    50%   { transform: translateY(170%); background-color: #dcb55c; }
-    100% { transform: translateY(0%); background-color: #c55544; }
-}
-@-moz-keyframes movingY {
-    0% { transform: translateY(0%); background-color: #c55544; }
-    50%   { transform: translateY(170%); background-color: #dcb55c; }
-    100% { transform: translateY(0%); background-color: #c55544; }
-}
-
 // bouncing ball
 @keyframes bouncing {
     from { transform: translate3d(0, -50, 0); }
