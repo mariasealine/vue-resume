@@ -59,16 +59,18 @@ export default {
   .about-text {
     // height: 300px;
     width: 70%;
-    background-color: white;
+    // background-color: white;
     padding: 36px;
     padding-top: 50px;
     font-family: 'Raleway', sans-serif;
     // font-family: 'Source Serif Pro', serif;
     font-size: 25px;
     .header {
-      background-color: #c55644;
+      background-color: #2c4b50;
+      color: white;
       width: 33%;
       padding: 10px;
+      margin-bottom: 36px;
     }
   }
   .contact-me__box {

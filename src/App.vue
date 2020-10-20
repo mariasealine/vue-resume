@@ -4,8 +4,9 @@
       <Navbar></Navbar>
       <Home></Home>
       <about></about>
-      <history-flip-cards></history-flip-cards>
-      <skills></skills>
+      <resume></resume>
+      <skills-new></skills-new>
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -15,8 +16,11 @@ import Navbar from './components/Navbar.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 // import History from './components/History.vue'
-import Skills from './components/Skills.vue'
-import HistoryFlipCards from './components/HistoryFlipCards.vue'
+// import HistoryFlipCards from './components/HistoryFlipCards.vue'
+import Resume from './components/Resume.vue'
+import SkillsNew from './components/SkillsNew.vue'
+import Footer from './components/Footer.vue'
+
 
 export default {
   name: 'app',
@@ -29,8 +33,9 @@ export default {
     Navbar,
     Home,
     About,
-    Skills,
-    HistoryFlipCards
+    SkillsNew,
+    Resume,
+    Footer
   },
   created() {
     this.$store.dispatch('updateLanguage', 'Eng')
@@ -80,6 +85,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
 
 body {
+  background: antiquewhite;
   #overlay {
     width: 100%;
     height: 100%;

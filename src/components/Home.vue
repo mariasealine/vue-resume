@@ -1,7 +1,8 @@
 <template>
   <div class="home-container" :class="colorSwitch ? 'blue' : 'yellow'">
     <!-- <div class="moving-object moving-object__small" @click="colorSwitch = !colorSwitch"></div> -->
-    <div class="moving-object moving-object__big" :class="{ active: moveSwitch }" @click="[moveSwitch = !moveSwitch, colorSwitch = !colorSwitch]"></div>
+    <div class="moving-object moving-object__big" :class="{ active: moveSwitch }" @click="[moveSwitch = !moveSwitch, colorSwitch = !colorSwitch]">
+    </div>
     <a name="home"></a>
     <b-row class="name-header container">
       <b-col cols="10" class="text-wrapper">
@@ -64,11 +65,11 @@ export default {
   background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench.png');
   &.blue {
-    background-image: -webkit-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-snow.png');
-    background-image:  -moz-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-snow.png');
-    background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-snow.png');
-    background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-snow.png');
-    background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-snow.png');
+    background-image: -webkit-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  -moz-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  -o-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  -ms-linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
+    background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
   }
   .name-header {
     padding-top: 80px;
