@@ -1,7 +1,7 @@
 <template>
   <div class="resume-container">
     <a name="resume"></a>
-      <a class="download-resume" :href="`${publicPath}${resume[currentLanguage]}`" download="resume">download resume</a>
+      <a class="download-resume" :href="`${publicPath}${resume[currentLanguage]}`" download="resume">{{buttonName[currentLanguage]}}</a>
       <div class="circle"></div>
   </div>
 </template>
@@ -11,6 +11,10 @@ export default {
   data() {
     return {
       publicPath: process.env.BASE_URL,
+      buttonName: {
+        Eng: 'Download resume',
+        Sve: 'Ladda ner CV'
+      },
       resume: {
         // TODO: Add correct files for resumes
         Eng: 'favicon.ico',
