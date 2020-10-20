@@ -178,7 +178,7 @@ export default {
       top: 69px;
       right: 32px;
     }
-    &.red {
+    &.blue {
       background-image: url('../assets/me-bench-blue.png');
       }
     .text-wrapper {
