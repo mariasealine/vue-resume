@@ -1,7 +1,7 @@
 <template>
   <div class="resume-container">
     <a name="resume"></a>
-      <a class="download-resume" :href="`${publicPath}${resume[currentLanguage]}`" download="resume">{{buttonName[currentLanguage]}}</a>
+      <a class="download-resume" :href="`${publicPath}${resume[currentLanguage]}`" download="resume"><font-awesome-icon icon="file-download" />{{buttonName[currentLanguage]}}</a>
       <div class="circle"></div>
   </div>
 </template>
@@ -43,14 +43,17 @@ export default {
   background: #2c4b50;
   position: relative;
   .download-resume {
-    background: #92783b;
+    background: #bf9c4c;
     color: white;
     padding: 10px;
     border: 2px solid white;
-    border-radius: 6px;
+    // border-radius: 6px;
     text-transform: uppercase;
     &:hover, &:focus, &:active {
       background: #a77a12;
+    }
+    svg {
+      margin-right: 10px;
     }
   }
   .circle {
@@ -62,6 +65,11 @@ export default {
     width: 45px;
     height: 45px;
     background-color: #c55544;
+  }
+}
+@media screen and (min-width: 576px) {
+  .resume-container {
+    justify-content: center;
   }
 }
 </style>
