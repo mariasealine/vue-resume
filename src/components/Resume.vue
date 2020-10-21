@@ -1,8 +1,8 @@
 <template>
-  <div class="resume-container">
+  <div class="resume-container" :class="colorSwitch ? 'invert' : ''">
     <a name="resume"></a>
-      <a class="download-resume" :href="`${publicPath}${resume[currentLanguage]}`" download="resume"><font-awesome-icon icon="file-download" />{{buttonName[currentLanguage]}}</a>
-      <div class="circle"></div>
+      <a class="download-resume" :class="colorSwitch ? 'invert' : ''" :href="`${publicPath}${resume[currentLanguage]}`" download="resume"><font-awesome-icon icon="file-download" />{{buttonName[currentLanguage]}}</a>
+      <div class="circle" @click="[colorSwitch = !colorSwitch]"></div>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
 export default {
   data() {
     return {
+      colorSwitch: false,
       publicPath: process.env.BASE_URL,
       buttonName: {
         Eng: 'Download resume',
@@ -42,13 +43,18 @@ export default {
   margin: 30px 0;
   background: #2c4b50;
   position: relative;
+  &.invert {
+    background: #c55544;
+  }
   .download-resume {
     background: #bf9c4c;
     color: white;
     padding: 10px;
     border: 2px solid white;
-    // border-radius: 6px;
     text-transform: uppercase;
+    &.invert {
+      background: #2c4b50;
+    }
     &:hover, &:focus, &:active {
       background: #a77a12;
     }
@@ -57,6 +63,7 @@ export default {
     }
   }
   .circle {
+    cursor: pointer;
     z-index: 2;
     position: absolute;
     right: 50px;
@@ -65,6 +72,11 @@ export default {
     width: 45px;
     height: 45px;
     background-color: #c55544;
+    -webkit-animation: growing-obj 6s infinite; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: growing-obj 6s infinite; /* Firefox < 16 */
+    -ms-animation: growing-obj 6s infinite; /* Internet Explorer */
+    -o-animation: growing-obj 6s infinite; /* Opera < 12.1 */
+    animation: growing-obj 6s infinite;
   }
 }
 @media screen and (min-width: 576px) {

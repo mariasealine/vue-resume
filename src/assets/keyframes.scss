@@ -166,3 +166,26 @@
     from { transform: translate3d(0, -50, 0); }
     to   { transform: translate3d(0, 20px, 0); }
 }
+
+@keyframes circleAround {
+    0% { transform: rotate(0deg) translate(-100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(-100px) rotate(360deg); }
+}
+@-webkit-keyframes circleAround {
+    0% { transform: rotate(0deg) translate(-100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(-100px) rotate(360deg); }
+}
+/* Internet Explorer */
+@-ms-keyframes circleAround {
+    0% { transform: rotate(0deg) translate(-100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(-100px) rotate(360deg); }
+}
+/* Opera < 12.1 */
+@-o-keyframes circleAround {
+    0% { transform: rotate(0deg) translate(-100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(-100px) rotate(360deg); }
+}
+@-moz-keyframes circleAround {
+    0% { transform: rotate(0deg) translate(-100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(-100px) rotate(360deg); }
+}

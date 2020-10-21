@@ -1,11 +1,16 @@
 <template>
   <div class="footer-container">
-    <div class="circle"></div>
+    <div class="circle" @click="active = !active"><div class="mini-circle" :class="active ? 'show' : 'hidden'"></div></div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      active: false
+    }
+  },
   computed: {
     currentLanguage: {
       get() {
@@ -21,16 +26,36 @@ export default {
 
 .footer-container {
   font-family: "Raleway", sans-serif;
-  padding: 36px;
+  // padding: 36px;
   position: relative;
+  height: 200px;
+  width: 100%;
   .circle {
+    cursor: pointer;;
 		z-index: 2;
 		position: absolute;
 		left: -63px;
 		border-radius: 50%;
 		width: 200px;
 		height: 200px;
-		background-color: #c55544;
+    background-color: #c55544;
+    .mini-circle {
+      &.hidden {
+        display: none;
+      }
+      &.show {
+        width:40px;
+        height:40px;
+        background-color:#2c4b50;;
+        border-radius:50%;
+        position:absolute;
+        top:0; bottom:0; left:0; right:0;
+        overflow:hidden;
+        margin:auto;
+        animation: circleAround 8s linear infinite;
+      }
+    }
 	}
 }
+
 </style>

@@ -41,7 +41,7 @@ export default {
 		padding: 36px;
 		font-size: 25px;;
 		font-family: 'Titillium Web', sans-serif;
-		margin-bottom: 80px;
+		margin-bottom: 85px;
 	}
 	&-header {
 		width: 100%;
