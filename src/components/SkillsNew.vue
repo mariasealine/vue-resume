@@ -20,7 +20,7 @@ export default {
         Eng: 'Skills',
         Sve: 'Kompetenser'
 			},
-			listSkills: ['JavaScript,', 'Git,', 'Vue,', 'Vuex,', 'Typescript,', 'HTML,', 'CSS,', 'Sass,', 'Less,', 'Scrum,', 'Sourcetree,', 'Java,', 'Jquery,', 'Bootstrap']
+			listSkills: ['JavaScript,', 'HTML,', 'CSS,', 'Git,', 'Vue,', 'Vuex,', 'Typescript,', 'Sass,', 'Less,', 'Scrum,', 'Sourcetree,', 'Jquery,', 'Bootstrap,', 'Java']
     }
   },
   computed: {

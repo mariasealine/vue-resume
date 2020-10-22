@@ -1,8 +1,15 @@
 <template>
   <div class="resume-container" :class="colorSwitch ? 'invert' : ''">
     <a name="resume"></a>
-      <a class="download-resume" :class="colorSwitch ? 'invert' : ''" :href="`${publicPath}${resume[currentLanguage]}`" download="resume"><font-awesome-icon icon="file-download" />{{buttonName[currentLanguage]}}</a>
+      <button class="download-resume" :class="colorSwitch ? 'invert' : ''" @click="openLanguageModal"><font-awesome-icon icon="file-download" />{{buttonName[currentLanguage]}}</button>
       <div class="circle" @click="[colorSwitch = !colorSwitch]"></div>
+      <div class="download-resume-modal">
+        <div class="link-wrapper">
+          <button class="close"><font-awesome-icon icon="times" /></button>
+          <a class="download-resume language" :href="`${publicPath}resume-english.pdf`" download="maria-sjolin-resume"><i class="flag-icon flag-icon-gb" />English</a>
+          <a class="download-resume language" :href="`${publicPath}resume-swedish.pdf`" download="maria-sjolin-cv"><i class="flag-icon flag-icon-se" />Svenska</a>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -18,8 +25,23 @@ export default {
       },
       resume: {
         // TODO: Add correct files for resumes
-        Eng: 'favicon.ico',
-        Sve: 'favicon3.ico'
+        Eng: 'CV-maria-eng.pdf',
+        Sve: 'CV-Maria-Sve.pdf'
+      }
+    }
+  },
+  methods: {
+    openLanguageModal() {
+      const modal = document.querySelector('.download-resume-modal');
+      const close = document.querySelector('.close');
+      modal.style.display = 'block';
+      close.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
       }
     }
   },
@@ -64,7 +86,7 @@ export default {
   }
   .circle {
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     right: 50px;
     top: -15px;
@@ -78,10 +100,50 @@ export default {
     -o-animation: growing-obj 6s infinite; /* Opera < 12.1 */
     animation: growing-obj 6s infinite;
   }
+  .download-resume-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.6);
+    .link-wrapper {
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      background: #1e363a;
+      margin: 25% auto;
+      padding: 20px;
+      border: 1px solid black;
+      width: 90%;
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        color: white;
+      }
+      .language {
+        margin: 10px;
+      }
+      .flag-icon {
+        margin-right: 8px;
+      }
+    }
+  }
 }
 @media screen and (min-width: 576px) {
   .resume-container {
     justify-content: center;
+    .download-resume-modal {
+      .link-wrapper {
+        width: 65%;
+      }
+    }
   }
 }
 </style>
