@@ -22,11 +22,6 @@ export default {
       buttonName: {
         Eng: 'Download resume',
         Sve: 'Ladda ner CV'
-      },
-      resume: {
-        // TODO: Add correct files for resumes
-        Eng: 'CV-maria-eng.pdf',
-        Sve: 'CV-Maria-Sve.pdf'
       }
     }
   },
