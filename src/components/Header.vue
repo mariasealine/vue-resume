@@ -108,7 +108,7 @@ export default {
   width: 100%
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 576px) {
   .header-nav {
     .navbar {
 			&-link {
