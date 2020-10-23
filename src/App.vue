@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="overlay">
-      <Navbar></Navbar>
+      <Header></Header>
       <Home></Home>
       <about></about>
       <resume></resume>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import Header from './components/Header.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Resume from './components/Resume.vue'
@@ -28,7 +28,7 @@ export default {
     }
   },
   components: {
-    Navbar,
+    Header,
     Home,
     About,
     SkillsNew,
@@ -107,6 +107,12 @@ body {
     animation: fadein 2s;
     animation-fill-mode: both;
   }
+  /* .content {
+    padding: 16px;
+  }
+  .sticky + .content {
+    padding-top: 102px;
+  } */
 }
 
 </style>

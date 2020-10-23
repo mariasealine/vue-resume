@@ -1,6 +1,6 @@
 <template>
   <div class="resume-container" :class="colorSwitch ? 'invert' : ''">
-    <a name="resume"></a>
+    <a class="anchor" name="resume"></a>
       <button class="download-resume" :class="colorSwitch ? 'invert' : ''" @click="openLanguageModal"><font-awesome-icon icon="file-download" />{{buttonName[currentLanguage]}}</button>
       <div class="circle" @click="[colorSwitch = !colorSwitch]"></div>
       <div class="download-resume-modal">
@@ -60,6 +60,12 @@ export default {
   margin: 30px 0;
   background: #2c4b50;
   position: relative;
+  .anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+  }
   &.invert {
     background: #c55544;
   }

@@ -70,5 +70,10 @@ export default {
 		}
 	}
 }
+@media only screen and (device-width: 768px) {
+	.skills-container {
+		margin-bottom: 110px;
+	}
+}
 
 </style>
