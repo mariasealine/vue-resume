@@ -72,6 +72,7 @@ export default {
 			display: flex;
 			justify-content: space-between;
 			.left-content {
+				font-size: 18px;
 				justify-self: flex-start;;
 			}
 			.right-content {
@@ -90,6 +91,8 @@ export default {
 		}
 	}
 	.language-button {
+		height: 20px;
+    width: 30px;
     border: none;
     background-color: transparent;
     margin: 5px;
