@@ -3,9 +3,9 @@
       <div class="navbar-content">
 				<div class="left-content">
 					<a class="navbar-link" href="#home">{{ text[currentLanguage][0] }}</a>
-					<a class="navbar-link" href="#about">{{ text[currentLanguage][1] }}</a>
+					<a class="navbar-link" href="#skills">{{ text[currentLanguage][1] }}</a>
 					<a class="navbar-link" href="#resume">{{ text[currentLanguage][2] }}</a>
-					<a class="navbar-link" href="#skills">{{ text[currentLanguage][3] }}</a>
+					<a class="navbar-link" href="#about">{{ text[currentLanguage][3] }}</a>
 				</div>
 				<div class="right-content">
 					<button @click="toEnglish" class="flag-icon flag-icon-gb language-button"></button>
@@ -20,8 +20,8 @@ export default {
     data() {
       return {
         text: {
-          Eng: ['Home', 'About', 'Resume', 'Skills'],
-          Sve: ['Hem', 'Om', 'CV', 'Kompetens']
+          Eng: ['Home', 'Skills', 'Resume', 'About'],
+          Sve: ['Hem', 'Kompetens', 'CV', 'Om']
         }
     }
   },

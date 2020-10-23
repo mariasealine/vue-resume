@@ -3,9 +3,9 @@
     <div id="overlay">
       <Header></Header>
       <Home></Home>
-      <about></about>
+      <contact-and-skills></contact-and-skills>
       <resume></resume>
-      <skills-new></skills-new>
+      <about-me></about-me>
       <Footer></Footer>
     </div>
   </div>
@@ -14,9 +14,9 @@
 <script>
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
-import About from './components/About.vue'
+import ContactAndSkills from './components/ContactAndSkills.vue'
 import Resume from './components/Resume.vue'
-import SkillsNew from './components/SkillsNew.vue'
+import AboutMe from './components/AboutMe.vue'
 import Footer from './components/Footer.vue'
 
 
@@ -30,8 +30,8 @@ export default {
   components: {
     Header,
     Home,
-    About,
-    SkillsNew,
+    ContactAndSkills,
+    AboutMe,
     Resume,
     Footer
   },

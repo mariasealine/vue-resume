@@ -47,7 +47,7 @@ export default {
         top:0; bottom:0; left:0; right:0;
         overflow:hidden;
         margin:auto;
-        animation: circleAround 8s linear infinite;
+        animation: circleAround 4s linear infinite;
       }
     }
 	}
