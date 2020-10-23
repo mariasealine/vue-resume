@@ -25,17 +25,12 @@ export default {
 @import '../assets/keyframes.scss';
 
 .footer-container {
-  font-family: "Raleway", sans-serif;
-  // padding: 36px;
   position: relative;
   height: 200px;
   width: 100%;
   .circle {
-    cursor: pointer;;
 		z-index: 2;
-		position: absolute;
 		left: -63px;
-		border-radius: 50%;
 		width: 200px;
 		height: 200px;
     background-color: #c55544;

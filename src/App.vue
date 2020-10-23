@@ -78,13 +78,20 @@ export default {
 
 <style lang="scss">
 @import './assets/keyframes.scss';
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
+  margin: 0;
+  p {
+    margin: 0;
+  }
+  .circle {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
   #overlay {
     width: 100%;
     height: 100%;
@@ -107,12 +114,10 @@ body {
     animation: fadein 2s;
     animation-fill-mode: both;
   }
-  /* .content {
-    padding: 16px;
-  }
-  .sticky + .content {
-    padding-top: 102px;
-  } */
+}
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 </style>

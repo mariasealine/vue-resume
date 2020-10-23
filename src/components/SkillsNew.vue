@@ -7,7 +7,6 @@
 				{{item}}
 			</div>
 		</div>
-		<div class="circle"></div>
   </div>
 </template>
 

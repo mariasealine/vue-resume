@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar" class="header-nav">
+  <div class="header-nav">
       <div class="navbar-content">
 				<div class="left-content">
 					<a class="navbar-link" href="#home">{{ text[currentLanguage][0] }}</a>
@@ -46,12 +46,12 @@ export default {
       this.$store.dispatch('updateLanguage', 'Sve')
 		},
 		myFunction() {
-			const header = document.querySelector("#navbar");
+			const header = document.querySelector('.header-nav');
 			const sticky = header.offsetTop;
       if (window.pageYOffset > sticky) {
-				header.classList.add("sticky");
+				header.classList.add('sticky');
 			} else {
-				header.classList.remove("sticky");
+				header.classList.remove('sticky');
 			}
     }
   }
@@ -66,7 +66,7 @@ export default {
 	width: 100%;
   padding: 10px 16px;
   background: #161616;
-  color: #f1f1f1;
+  color: #afb0b1;;
 	.navbar {
 		&-content {
 			display: flex;
@@ -81,7 +81,7 @@ export default {
 		&-link {
 			font-family: 'Titillium Web', sans-serif;
 			margin: 0 10px;
-			color: white;
+			color: #b4b5b5;;
 			display: inline-block;
 			text-decoration: none;
 			&:hover {

@@ -2,7 +2,7 @@
   <div class="resume-container" :class="colorSwitch ? 'invert' : ''">
     <a class="anchor" name="resume"></a>
       <button class="download-resume" :class="colorSwitch ? 'invert' : ''" @click="openLanguageModal"><font-awesome-icon icon="file-download" />{{buttonName[currentLanguage]}}</button>
-      <div class="circle" @click="[colorSwitch = !colorSwitch]"></div>
+      <div class="circle resume-circle" @click="[colorSwitch = !colorSwitch]"></div>
       <div class="download-resume-modal">
         <div class="link-wrapper">
           <button class="close"><font-awesome-icon icon="times" /></button>
@@ -75,6 +75,8 @@ export default {
     padding: 10px;
     border: 2px solid white;
     text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
     &.invert {
       background: #2c4b50;
     }
@@ -85,13 +87,10 @@ export default {
       margin-right: 10px;
     }
   }
-  .circle {
-    cursor: pointer;
+  .resume-circle {
     z-index: 1;
-    position: absolute;
     right: 50px;
     top: -15px;
-    border-radius: 50%;
     width: 45px;
     height: 45px;
     background-color: #c55544;
@@ -124,9 +123,12 @@ export default {
       width: 90%;
       .close {
         position: absolute;
-        right: 10px;
+        font-size: 24px;
+        right: 6px;
         top: 6px;
         color: white;
+        background-color: inherit;
+        border: none;
       }
       .language {
         margin: 10px;

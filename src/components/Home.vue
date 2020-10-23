@@ -1,28 +1,25 @@
 <template>
   <div class="home-container" :class="colorSwitch ? 'blue' : 'yellow'">
-    <!-- <div class="moving-object moving-object__small" @click="colorSwitch = !colorSwitch"></div> -->
-    <div class="moving-object moving-object__big" :class="{ active: moveSwitch }" @click="[moveSwitch = !moveSwitch, colorSwitch = !colorSwitch]">
+    <div class="circle home-circle" :class="{ active: moveSwitch }" @click="[moveSwitch = !moveSwitch, colorSwitch = !colorSwitch]">
     </div>
     <a name="home"></a>
-    <b-row class="name-header container">
-      <b-col cols="10" class="text-wrapper">
-        <div class="pl-4">
+    <div class="name-header">
+      <div class="text-wrapper">
           <b><p class="name">Maria</p> <p class="surname">Sjölin</p></b>
           <p class="profession">{{ text[currentLanguage] }}</p>
-        </div>
-        </b-col>
-        <div class="contact-icons">
-            <a id="email-link" href="mailto:mia.sjolin@gmail.com">
-              <font-awesome-icon icon="envelope" />
-            </a>
-            <a id="linkedin-link" href="https://www.linkedin.com/in/maria-sjölin-56398715a/">
-              <font-awesome-icon :icon="['fab', 'linkedin']" />
-            </a>
-            <a id="github-link" href="https://github.com/mariasealine">
-              <font-awesome-icon :icon="['fab', 'github']" />
-            </a>
-        </div>
-    </b-row>
+      </div>
+      <div class="contact-icons">
+        <a id="email-link" href="mailto:mia.sjolin@gmail.com">
+          <font-awesome-icon icon="envelope" />
+        </a>
+        <a id="linkedin-link" href="https://www.linkedin.com/in/maria-sjölin-56398715a/">
+          <font-awesome-icon :icon="['fab', 'linkedin']" />
+        </a>
+        <a id="github-link" href="https://github.com/mariasealine">
+          <font-awesome-icon :icon="['fab', 'github']" />
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -71,45 +68,36 @@ export default {
     background-image:  linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 90%), url('../assets/me-bench-blue.png');
   }
   .name-header {
-    padding-top: 80px;
+    width: 100%;
+    padding: 80px 0 15px 36px;
     align-content: center;
     font-family: 'Staatliches';
     font-size: 70px;
-  }
-  .moving-object {
-    cursor: pointer;
-    z-index: 2;
-    position: absolute;
-    border-radius: 50%;
-    &__small {
-      width: 30px;
-      height: 30px;
-      top: 111px;
-      right: 100px;
-      -webkit-animation: growing-obj 7s linear infinite; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: growing-obj 7s linear infinite; /* Firefox < 16 */
-      -ms-animation: growing-obj 7s linear infinite; /* Internet Explorer */
-      -o-animation: growing-obj 7s linear infinite; /* Opera < 12.1 */
-      animation: growing-obj 7s linear infinite;
+    .text-wrapper {
+      -webkit-box-flex: 0;
+      flex: 0 0 80%;
+      max-width: 80%;
+      line-height: 1.5;
     }
-    &__big {
-      width: 100px;
-      height: 100px;
-      top: 430px;
-      left: 40px;
-      background-color: #2c4b50;
-      -webkit-animation: movingX 5s infinite; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: movingX 5s infinite; /* Firefox < 16 */
-      -ms-animation: movingX 5s infinite; /* Internet Explorer */
-      -o-animation: movingX 5s infinite; /* Opera < 12.1 */
-      animation: movingX 5s infinite;
-      &.active {
-        -webkit-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Firefox < 16 */
-        -ms-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alernate infinite; /* Internet Explorer */
-        -o-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Opera < 12.1 */
-        animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite;
-      }
+  }
+  .home-circle {
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    top: 430px;
+    left: 40px;
+    background-color: #2c4b50;
+    -webkit-animation: movingX 5s infinite; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: movingX 5s infinite; /* Firefox < 16 */
+    -ms-animation: movingX 5s infinite; /* Internet Explorer */
+    -o-animation: movingX 5s infinite; /* Opera < 12.1 */
+    animation: movingX 5s infinite;
+    &.active {
+      -webkit-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Firefox < 16 */
+      -ms-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alernate infinite; /* Internet Explorer */
+      -o-animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite; /* Opera < 12.1 */
+      animation: bouncing 0.5s cubic-bezier(.5,0.05,1,.5) alternate infinite;
     }
   }
   
@@ -124,6 +112,7 @@ export default {
   }
   .surname {
     line-height: 1;
+    margin-bottom: 16px;
     color: #d6c00b;
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -171,6 +160,10 @@ export default {
     background-position: 15%;
     background-image: url('../assets/me-bench-low-res.jpg');
     background-attachment: unset;
+    .name-header {
+      padding: 80px 0 15px 20px;
+      max-width: 70%;
+    }
     .name {
       padding-top: 60px;
     }
@@ -185,18 +178,5 @@ export default {
       padding-left: 0;
     }
   }
-}
-
-.test-icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 111px;
-  right: 100px;
-  -webkit-animation: growing-obj 7s linear infinite; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: growing-obj 7s linear infinite; /* Firefox < 16 */
-  -ms-animation: growing-obj 7s linear infinite; /* Internet Explorer */
-  -o-animation: growing-obj 7s linear infinite; /* Opera < 12.1 */
-  animation: growing-obj 7s linear infinite;
 }
 </style>

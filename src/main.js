@@ -1,21 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
-import BootstrapVue from "bootstrap-vue";
+// import BootstrapVue from "bootstrap-vue";
 import FlagIcon from "vue-flag-icon";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope, faFileDownload, faWindowClose, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-Vue.use(BootstrapVue, FlagIcon);
+Vue.use(FlagIcon);
 
 library.add(faLinkedin, faEnvelope, faGithub, faFileDownload, faWindowClose, faTimes)
  
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
 
 Vue.config.productionTip = false
 
