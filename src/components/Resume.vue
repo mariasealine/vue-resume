@@ -70,6 +70,7 @@ export default {
     background: #c55544;
   }
   .download-resume {
+    cursor: pointer;
     background: #bf9c4c;
     color: white;
     padding: 10px;
