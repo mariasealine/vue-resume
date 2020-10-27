@@ -6,8 +6,8 @@
       <div class="download-resume-modal">
         <div class="link-wrapper">
           <button class="close"><font-awesome-icon icon="times" /></button>
-          <a class="download-resume language" :href="`${publicPath}resume-english.pdf`" download="maria-sjolin-resume"><i class="flag-icon flag-icon-gb" />English</a>
-          <a class="download-resume language" :href="`${publicPath}resume-swedish.pdf`" download="maria-sjolin-cv"><i class="flag-icon flag-icon-se" />Svenska</a>
+          <a class="download-resume language" :href="`${publicPath}maria-cv-eng.pdf`" download="maria-sjolin-resume"><i class="flag-icon flag-icon-gb" />English</a>
+          <a class="download-resume language" :href="`${publicPath}maria-cv-sve.pdf`" download="maria-sjolin-cv"><i class="flag-icon flag-icon-se" />Svenska</a>
         </div>
       </div>
   </div>
